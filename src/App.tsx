@@ -1,20 +1,23 @@
 import React from 'react';
-import { SignupScreen,LoginScreen ,HomePage }  from './components/pages';
 import {
   BrowserRouter as Router,
   Route,Routes,
   Link
 } from "react-router-dom";
+import { NavBar } from './components';
+import { HomePage } from './pages';
 function App() {
   return (
     <div className="App">
-      <Router>
+      {/* <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/signupScreen" element={<SignupScreen />}/>
           <Route path="/loginScreen" element={<LoginScreen />} />
       </Routes>
-      </Router>
+      </Router> */}
+      <NavBar/>
+    <HomePage/>
     </div>
   );
 }
