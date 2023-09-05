@@ -1,5 +1,5 @@
 
-const mobileDataset = [
+const Mobiles = [
     {
       name: "Samsung",
       model: "Galaxy S21",
@@ -43,5 +43,5 @@ const mobileDataset = [
     // Add more mobiles as needed
   ];
   
-  export default mobileDataset;
+  export default Mobiles;
   

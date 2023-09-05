@@ -1,5 +1,5 @@
 
-const carDataset = [
+const Cars = [
   {
     "name": "Toyota Corolla",
     "model": "2022",
@@ -8,6 +8,14 @@ const carDataset = [
     "time": "2023-09-03T09:00:00Z",
     "image": "https://source.unsplash.com/random/600x400?q=Toyota Corolla",
     },
+    {
+      "name": "Toyota Corolla",
+      "model": "2022",
+      "price": 25000,
+      "location": "Karachi",
+      "time": "2023-09-03T09:00:00Z",
+      "image": "https://source.unsplash.com/random/600x400?q=Toyota Corolla",
+      },
     {
       "name": "Toyota Corolla",
       "model": "2022",
@@ -42,5 +50,5 @@ const carDataset = [
 },
   ];
   
-  export default carDataset;
+  export default Cars;
   

@@ -25,8 +25,8 @@ function timeAgo(timestamp: string): string {
         
 
   return (
-    <div className="card h-100 border-success">
-      <img src={props.image} className="card-img-top" alt="..."/>
+    <div className="card h-100 border-success" style={{width:'240px'}}>
+      <img src='/assets/car.png' className="card-img-top" alt="..."/>
       <div className="card-body ">
         <h5 className="card-title">Rs{props.price}</h5>
         <p className="card-text">{props.name} {props.model}

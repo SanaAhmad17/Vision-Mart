@@ -1,5 +1,5 @@
 
-const bikeDataset = [
+const Bikes = [
     {
       name: "Honda CBR 1000RR",
       model: "2022",
@@ -47,4 +47,4 @@ const bikeDataset = [
       },
   ];
   
-  export default bikeDataset;
+  export default Bikes;

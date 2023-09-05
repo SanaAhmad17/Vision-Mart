@@ -1,4 +1,4 @@
-const furnitureDataset = [
+const Furniture = [
     {
       name: "Sofa Set",
       model : 'New',
@@ -48,5 +48,5 @@ const furnitureDataset = [
     // Add more furniture listings as needed
   ];
   
-  export default furnitureDataset;
+  export default Furniture;
   

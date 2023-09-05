@@ -1,4 +1,4 @@
-export {default as carDataset} from './cars'
-export {default as mobileDataset} from './mobiles'
-export {default as bikeDataset} from './bikes'
-export {default as furnitureDataset} from './furniture'
+export {default as Cars} from './cars'
+export {default as Mobiles} from './mobiles'
+export {default as Bikes} from './bikes'
+export {default as Furniture} from './furniture'
