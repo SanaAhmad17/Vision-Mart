@@ -1,4 +1,4 @@
-import React,{useRef} from 'react'
+import React,{useRef,useState} from 'react'
 import './../App.css'
 import { CarD } from '../components'
 import { Cars ,Mobiles ,Bikes , Furniture} from '../dummy-data'
@@ -9,15 +9,40 @@ export default function HomePage() {
      {name: 'Bikes & Moyorcycles' , value : Bikes},
     // {name: 'Furniture' , value : Furniture}
   ]
-  
-  // const ulRefs = Lists.map(() => useRef<HTMLUListElement | null>(null));
-  // const handleScroll = (index : number, scrollOffset: number) => {
-  //   const ulElement = ulRefs[index].current;
-  //   if (ulElement) {
-  //     ulElement.scrollLeft += scrollOffset;
-  //   }
-  // };
+  const elementRefs: React.RefObject<HTMLUListElement>[] = Lists.map(() =>
+    useRef<HTMLUListElement>(null)
+  );
 
+  const [arrowDisables, setArrowDisables] = useState<boolean[]>(Lists.map(() => true));
+
+  const handleHorizontalScroll = (index: number, speed: number, distance: number, step: number) => {
+    let scrollAmount = 0;
+    const slideTimer = setInterval(() => {
+      const currentRef = elementRefs[index]?.current;
+      if (currentRef) {
+        currentRef.scrollLeft += step;
+        scrollAmount += Math.abs(step);
+        if (scrollAmount >= distance) {
+          clearInterval(slideTimer);
+        }
+        if (currentRef.scrollLeft === 0) {
+          setArrowDisables((prev) => {
+            const updatedDisables = [...prev];
+            updatedDisables[index] = true;
+            return updatedDisables;
+          });
+        } else {
+          setArrowDisables((prev) => {
+            const updatedDisables = [...prev];
+            updatedDisables[index] = false;
+            return updatedDisables;
+          });
+        }
+      } else {
+        clearInterval(slideTimer); // Clear the interval if the ref is null.
+      }
+    }, speed);
+  };
   return (
     <div>
       <div className='container-fluid' >
@@ -80,19 +105,34 @@ export default function HomePage() {
     
     </div>
     {Lists.map((item , index)=>(
+      
     <div className='container-fluid ' key={index}>
-      {/* <button onClick={() => handleScroll(index,-100)}>Left</button>
-<button onClick={() => handleScroll(index,100)}>Right</button> */}
+     
     <h3 className="d-flex justify-content-between align-items-center mt-3">
       <span>{item.name}</span>
       <a className='link fs-6' href="#">View more</a> </h3>
-    <ul className="list-group list-group-horizontal mx-5 list-group-flush hide-scrollbar  " style={{ overflowX:'scroll',whiteSpace:'nowrap',scrollbarWidth:'none'}} >
+    <ul className="list-group list-group-horizontal mx-5 list-group-flush hide-scrollbar  " style={{ overflowX:'scroll',whiteSpace:'nowrap',scrollbarWidth:'none'}} ref={elementRefs[index]} >
       { item.value.map((data , index)=>(
   <li className="list-group-item " key={index} style={{}}>
     <CarD {...data} />
   </li>
       ))}
 </ul> 
+<button
+      onClick={() => {
+        handleHorizontalScroll(index, 25, 100, -10);
+      }}
+      disabled={arrowDisables[index]}
+    >
+      Left
+    </button>
+    <button
+      onClick={() => {
+        handleHorizontalScroll(index, 25, 100, 10);
+      }}
+    >
+      Right
+    </button>
 </div>))}
 
   </div>
