@@ -7,6 +7,7 @@ const Cars = [
     "location": "Karachi",
     "time": "2023-09-03T09:00:00Z",
     "image": "https://source.unsplash.com/random/600x400?q=Toyota Corolla",
+    sellerRating: 3,
     },
     {
       "name": "Toyota Corolla",
@@ -15,6 +16,7 @@ const Cars = [
       "location": "Karachi",
       "time": "2023-09-03T09:00:00Z",
       "image": "https://source.unsplash.com/random/600x400?q=Toyota Corolla",
+      sellerRating: 3,
       },
     {
       "name": "Toyota Corolla",
@@ -23,6 +25,7 @@ const Cars = [
       "location": "Karachi",
       "time": "2023-09-03T09:00:00Z",
       "image": "https://source.unsplash.com/random/600x400?q=Toyota Corolla",
+      sellerRating: 3,
       },
 {
     "name": "Honda Civic",
@@ -31,6 +34,7 @@ const Cars = [
     "location": "Lahore",
     "time": "2023-09-02T15:30:00Z",
     "image": "https://source.unsplash.com/random/600x400?q=Honda Civic",
+    sellerRating: 3,
 },
 {
     "name": "Ford Mustang",
@@ -39,6 +43,7 @@ const Cars = [
     "location": "Islamabad",
     "time": "2023-08-27T12:45:00Z",
     "image": "https://source.unsplash.com/random/600x400?q=Ford Mustang",
+    sellerRating: 3,
 },
 {
     "name": "Chevrolet Camaro",
@@ -47,6 +52,7 @@ const Cars = [
     "location": "Rawalpindi",
     "time": "2023-08-29T18:20:00Z",
     "image": "https://source.unsplash.com/random/600x400?q=Chevrolet Camaro",
+    sellerRating: 3,
 },
   ];
   

@@ -5,6 +5,7 @@ const Furniture = [
       category: "Living Room",
       price: 25000,
       image: "https://source.unsplash.com/random/600x400?q=Toyota Corolla",
+      sellerRating: 3,
       location: "Karachi",
       time: "2023-09-05T10:30:00Z",
     },
@@ -16,6 +17,7 @@ const Furniture = [
       image: "https://source.unsplash.com/random/600x400?q=Toyota Corolla1",
       location: "Lahore",
       time: "2023-09-04T14:15:00Z",
+      sellerRating: 3,
     },
     {
       name: "Bed Frame",
@@ -25,6 +27,7 @@ const Furniture = [
       image: "https://source.unsplash.com/random/600x400?q=Toyota Corolla2",
       location: "Islamabad",
       time: "2023-09-03T09:45:00Z",
+      sellerRating: 3,
     },
     
     {
@@ -35,6 +38,7 @@ const Furniture = [
       image: "https://source.unsplash.com/random/600x400?q=Toyota Corolla3",
       location: "Rawalpindi",
       time: "2023-09-02T16:00:00Z",
+      sellerRating: 3,
     },
     {
       name: "Bookshelf",
@@ -44,6 +48,7 @@ const Furniture = [
       image: "https://source.unsplash.com/random/600x400?q=Toyota Corolla3",
       location: "Rawalpindi",
       time: "2023-09-02T16:00:00Z",
+      sellerRating: 3,
     },
     // Add more furniture listings as needed
   ];

@@ -4,7 +4,7 @@ import {
   Route,Routes,
   Link
 } from "react-router-dom";
-import { NavBar } from './components';
+import { NavBar ,Footer } from './components';
 import { HomePage } from './pages';
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
       </Router> */}
       <NavBar/>
     <HomePage/>
+    <Footer/>
     </div>
   );
 }

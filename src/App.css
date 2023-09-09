@@ -1,37 +1,42 @@
-
-.image-container {
-  
-    display: flex;
-    justify-content: space-around; 
-    flex-direction: row;
-   
-  }
- figcaption{
-  display: inline;
-  text-align: center;
- }
- figure{
-  display: inline-flex;
-  flex-direction: column;
-  margin: 25px;
- }
-/* .input-group{
-  width: 50rem;
-} */
-@media(max-width=768px){
-  .input-group{
-    width:auto;
-  }
-} 
-
-.hide-scrollbar {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 11 */
+.star-rating {
+  display: inline-block;
+  font-size: 0;
 }
 
-.hide-scrollbar::-webkit-scrollbar {
+.star-rating-fill {
+  display: inline-block;
   width: 0;
-  height: 0;
+  height: 20px;
+  background-color: gold;
+  white-space: nowrap;
+  overflow: hidden;
 }
+.tooltip {
+  visibility: hidden;
+  width: max-content;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.your-card:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+
+
 
 

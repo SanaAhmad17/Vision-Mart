@@ -1,0 +1,47 @@
+.arrow{
+border: 0;
+background-color:white;
+height: 20px;
+align-self: center;
+}
+.image-container {
+  
+    display: flex;
+    justify-content: space-around; 
+    flex-direction: row;
+   
+  }
+ figcaption{
+  display: inline;
+  text-align: center;
+ }
+ figure{
+  display: inline-flex;
+  flex-direction: column;
+  margin: 25px;
+ }
+/* .input-group{
+  width: 50rem;
+} */
+@media(max-width=768px){
+  .input-group{
+    width:auto;
+  }
+} 
+
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 11 */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+ul{
+    display: inline;
+}
+.list-group-item {
+    border: none;
+  }
+ 
