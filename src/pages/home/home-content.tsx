@@ -2,6 +2,7 @@ import React,{createRef} from 'react'
 import './home.css'
 import { CarD } from '../../components'
 import { Cars, Mobiles, Bikes, Furniture } from '../../dummy-data'
+import { Link } from 'react-router-dom';
 export default function HomeContent() {
     const Lists = [
         { name: 'Cars', value: Cars },
@@ -48,8 +49,8 @@ export default function HomeContent() {
   return (
     <div>
     {Lists.map((item:any,index:any) => (
-        <div className='container-fluid ' key={index}>
-          <h3 className="d-flex justify-content-between align-items-center mt-3 mx-5">
+        <div className='container-fluid px-md-2 px-0' key={index}>
+          <h3 className="d-flex justify-content-between align-items-center mt-3 mx-md-5 mx-1">
             <span>{item.name}</span>
             <a className='link fs-6' href="#">View more</a> </h3>
             <div style={{display:'flex',flexDirection:'row'}}>
@@ -60,10 +61,12 @@ export default function HomeContent() {
           >
             <i className="fa-solid fa-chevron-left"></i>
           </button>
-          <ul className="list-group list-group-horizontal mx-4  hide-scrollbar  " style={{ overflowX: 'scroll', whiteSpace: 'nowrap', scrollbarWidth: 'none' }} ref={elementRefs[index]} >
+          <ul className="list-group list-group-horizontal mx-md-4 mx-0 hide-scrollbar  " style={{ overflowX: 'scroll', whiteSpace: 'nowrap', scrollbarWidth: 'none' }} ref={elementRefs[index]} >
             {item.value.map((data:any, index:any) => (
-              <li className="list-group-item " key={index} style={{}}>
+              <li className="list-group-item px-md-4 px-2" key={data.name} style={{}}>
+                <Link to={`/card/${data.name}`}>
                 <CarD {...data} />
+                </Link>
               </li>
             ))}
           </ul>

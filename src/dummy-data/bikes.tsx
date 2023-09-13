@@ -31,7 +31,7 @@ const Bikes = [
         sellerRating: 3,
       },
       {
-        name: "Ducati Panigale V4",
+        name: "Ducati Panigale V",
         model: "2023",
         price: 2200000, // Price in PKR
         engineDisplacement: "1103cc",

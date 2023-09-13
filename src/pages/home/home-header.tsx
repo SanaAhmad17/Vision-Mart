@@ -2,14 +2,14 @@ import React from 'react'
 import './home.css'
  const HomeHeader=()=> {
   return (
- <div  className='mx-5'>   
+ <div  className='mx-md-5 mx-1'>   
 <div className='container-fluid' >
 <img src="/assets/background.png" className="img-fluid mt-3 " alt="..."></img>
 </div>
-<h3 className="h3 m-3">All categories</h3>
-<div className='container-fluid ' style={{ }}>
+<h3 className="h3 m-3 all-categories">All categories</h3>
+<div className='container-fluid-categories ' style={{ }}>
 <figure>
-  <img src="/assets/mobile.png" className="rounded-circle" alt="mobiles" width="85" height="85" />
+  <img src="/assets/mobile.png" className="img-fluid rounded-circle" alt="mobiles" width="85" height="85" />
   <figcaption >Mobiles</figcaption>
 </figure>
 <figure>

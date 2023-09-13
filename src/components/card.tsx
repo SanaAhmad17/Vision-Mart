@@ -1,6 +1,7 @@
 import React from 'react'
 import Rating from '@mui/material/Rating';
 import './../App.css'
+import Colors from '../res/colors';
 interface data {
   name: string;
   model: string;
@@ -32,15 +33,14 @@ function StarRating( rating : number ) {
   );
 }
       const CarD = (props : data) => {
-
   return (
-    <div className="card  " style={{width:'240px',height:'310px'}}>
-      <img src='/assets/furniture.jpg' className="card-img-top" alt="..." style={{height:'180px'}}/>
-      <div className="card-body py-1">
-        <h6 className="card-title mb-0 d-flex justify-content-between" style={{display:'inline'}}>Rs{props.price} {StarRating(props.sellerRating) }</h6>
-        <h6 className="card-text mb-0 fw-bold" style={{ whiteSpace: 'normal',color:'#292421' }}>{props.name} {props.model} 
+    <div className="card "  >
+      <img src='/assets/furniture.jpg' className="card-img-top " alt="..." />
+      <div className="card-body py-1  d-flex flex-column justify-content-between">
+        <h6 className="card-title mb-0  d-flex justify-content-between" style={{display:'inline'}}>Rs{props.price} {StarRating(props.sellerRating) }</h6>
+        <h6 className="card-text mb-0 fw-bold-md" style={{ whiteSpace: 'normal',color:Colors.color1 }}>{props.name} {props.model} 
         </h6>
-        <p className='fs-6' style={{color:'#525C65'}} >
+        <p  style={{color:Colors.color2,fontSize:'13px'}} >
         <i className="fa-solid fa-magnifying-glass-location"></i> {props.location} <br/> {timeAgo(props.time)} 
         </p>
       </div>

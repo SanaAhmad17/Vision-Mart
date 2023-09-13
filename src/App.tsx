@@ -2,22 +2,19 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route,Routes,
-  Link
 } from "react-router-dom";
-import { NavBar ,Footer } from './components';
+import { NavBar ,Footer, CardDetail } from './components';
 import { HomePage } from './pages';
 function App() {
   return (
     <div className="App">
-      {/* <Router>
+      <NavBar/>
+      <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/signupScreen" element={<SignupScreen />}/>
-          <Route path="/loginScreen" element={<LoginScreen />} />
+        <Route path="/card/:cardId" element={<CardDetail />} />
       </Routes>
-      </Router> */}
-      <NavBar/>
-    <HomePage/>
+    </Router>
     <Footer/>
     </div>
   );

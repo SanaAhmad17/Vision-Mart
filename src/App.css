@@ -32,11 +32,25 @@
   visibility: visible;
   opacity: 1;
 }
-
-
-
-
-
+.card {
+  width: 240px;
+  height: 310px;
+}
+.card-img-top{
+height: 180px;
+}
+@media screen and (max-width: 768px) {
+  .card {
+    width:180px;
+    height:240px;
+    --mdb-card-spacer-x: 0.5rem;
+  }
+  .card-img-top{
+    height: 120px;}
+    .card-title {
+      font-size:14px;
+    }   
+}
 
 
 

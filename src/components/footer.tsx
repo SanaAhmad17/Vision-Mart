@@ -1,6 +1,6 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon,MDBBtn } from 'mdb-react-ui-kit';
-
+import Colors from '../res/colors';
 export default function Footer() {
   return (
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted mt-3'>
@@ -112,9 +112,9 @@ export default function Footer() {
         </MDBContainer>
       </section>
 
-      <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+      <div className='text-center p-4' >
         © 2023 Copyright:
-        <a  href="#" ><i className="fa-solid fa-dragon" style={{color:'#DC143C'}}></i>Vision-Mart</a>
+        <a  href="#" ><i className="fa-solid fa-dragon" style={{color:Colors.color3}}></i>Vision-Mart</a>
       </div>
     </MDBFooter>
   );

@@ -37,7 +37,7 @@ const Mobiles = [
       sellerRating: 3,
     },
     {
-      name: "OnePlus",
+      name: "OnePlus1",
       model: "9 Pro",
       price: 150000, // Converted to PKR from USD
       image: "https://source.unsplash.com/random/600x400?q=apple+iphone+14+pro",
