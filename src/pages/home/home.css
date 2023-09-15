@@ -34,11 +34,15 @@ ul{
 .list-group-item {
     border: none;
   }
+  .container-fluid-categories {
+    scrollbar-width: 2px;
+  }
   @media screen and (max-width: 768px) {
     .container-fluid-categories {
       display: flex;
       flex-wrap: nowrap;
       overflow-x: auto;
+      scrollbar-width: 2px;
     }
   
     .container-fluid-categories figure {
@@ -51,7 +55,7 @@ ul{
       width:60px;
     }
     .all-categories{
-      margin:5px;
+      margin:0px;
       font-size: 20px;
     } 
   }

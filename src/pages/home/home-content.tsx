@@ -50,7 +50,7 @@ export default function HomeContent() {
     <div>
     {Lists.map((item:any,index:any) => (
         <div className='container-fluid px-md-2 px-0' key={index}>
-          <h3 className="d-flex justify-content-between align-items-center mt-3 mx-md-5 mx-1">
+          <h3 className="d-flex justify-content-between align-items-center mt-3 mx-md-5 mx-1 all-categories">
             <span>{item.name}</span>
             <a className='link fs-6' href="#">View more</a> </h3>
             <div style={{display:'flex',flexDirection:'row'}}>

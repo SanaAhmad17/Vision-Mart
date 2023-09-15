@@ -39,6 +39,9 @@
 .card-img-top{
 height: 180px;
 }
+.product{
+  
+}
 @media screen and (max-width: 768px) {
   .card {
     width:180px;
@@ -51,6 +54,7 @@ height: 180px;
       font-size:14px;
     }   
 }
+
 
 
 
