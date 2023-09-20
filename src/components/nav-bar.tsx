@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './../App.css'
 import Colors from '../res/colors'
+import { MDBBtn, MDBModal, MDBModalContent, MDBModalDialog } from 'mdb-react-ui-kit'
+import Login from '../firebase/login'
 export default function NavBar() {
+  const [centredModal, setCentredModal] = useState(false);
+
+  const toggleShow = () => setCentredModal(!centredModal);
   return (
     <div>
     <nav className="navbar navbar-expand-sm bg-success ">
@@ -13,7 +18,7 @@ export default function NavBar() {
     <div className="collapse navbar-collapse " id="navbarSupportedContent" style={{justifyContent:'center'}}>
       <ul className="navbar-nav  mb-2 mb-lg-0">
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{color:Colors.color4}} >
             Location <i className="fa-solid fa-location-dot"></i>
           </a>
           <ul className="dropdown-menu">
@@ -36,10 +41,11 @@ export default function NavBar() {
     borderRight: '3px solid #1E90FF',
     borderTop: '3px solid #F08080',
     borderRadius: '30px',
+    color:Colors.color4
     }}><i className="fa-solid fa-plus"></i> Sell</button>
      
-      <button className="btn btn-link m-2" type="submit" style={{color:Colors.color4}}>Login</button>
-  
+   <Login/>
+      
       </div>
   </div>
 </nav>

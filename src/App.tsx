@@ -5,17 +5,19 @@ import {
 } from "react-router-dom";
 import { NavBar ,Footer, CardDetail } from './components';
 import { HomePage } from './pages';
+import PostAdd from './pages/postAdd/post-add';
 function App() {
   return (
     <div className="App">
-      <NavBar/>
+      {/* <NavBar/>
       <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/card/:cardId" element={<CardDetail />} />
       </Routes>
     </Router>
-    <Footer/>
+    <Footer/> */}
+    <PostAdd/>
     </div>
   );
 }

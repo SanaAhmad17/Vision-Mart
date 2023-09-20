@@ -98,7 +98,7 @@ export default function CardDetail() {
       <div>
       <p className='m-md-3 'style={{borderTop:'5px solid white'}}>
       <i className="fa-regular fa-user"></i> Seller Name <br/>
-      <a className='link fs-6' href="#">See Profile  <i className="fa-solid fa-chevron-right"></i></a> <br/>
+      <a href='/' className='fs-6'>View Seller Profile</a>
       <MDBBtn outline rounded color='success' style={{width:'200px'}}>
       <i className="fa-solid fa-phone"></i> Show Phone Number
       </MDBBtn><br/>
